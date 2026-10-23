@@ -3,6 +3,7 @@
 **学习通（超星 / 泛雅）页面自动化技术手册与脚本集**：用 Playwright 驱动**已登录**的浏览器，操作章节任务点、视频播放、章节测验与作业页面。
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/zyqchanel-06/chaoxing-automation?color=blue)](https://github.com/zyqchanel-06/chaoxing-automation/releases)
 [![Playwright](https://img.shields.io/badge/playwright-cli-0.1.22-green.svg)](https://playwright.dev/)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20PowerShell-lightgrey.svg)](#)
 
