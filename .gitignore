@@ -1,0 +1,23 @@
+# Playwright 浏览器 profile
+.edge-profile*/
+.edge-profile-*/
+*.edge-profile/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 自动化产出的临时文件
+out/
+tmp/
+*.log
+*.png
+*.har
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
