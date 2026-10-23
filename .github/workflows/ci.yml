@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    name: 脚本语法检查
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 安装 Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 注入脚本语法检查（node --check）
+        run: |
+          for f in scripts/*.js; do
+            echo "== $f"
+            node --check "$f"
+          done
+
+      - name: Python 脚本语法检查
+        run: python -m compileall -q scripts
+
+      - name: 文档完整性（每篇 references 非空）
+        run: |
+          test -s SKILL.md
+          for f in references/*.md; do test -s "$f" || { echo "empty: $f"; exit 1; }; done
+          echo "docs ok"
